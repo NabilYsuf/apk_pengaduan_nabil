@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2024 at 07:07 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Waktu pembuatan: 12 Jun 2024 pada 02.39
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `masyarakat`
+-- Struktur dari tabel `masyarakat`
 --
 
 CREATE TABLE `masyarakat` (
@@ -32,21 +32,19 @@ CREATE TABLE `masyarakat` (
   `tgl_aduan` date NOT NULL,
   `isi_aduan` varchar(300) NOT NULL,
   `lok_kejadian` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `masyarakat`
+-- Dumping data untuk tabel `masyarakat`
 --
 
 INSERT INTO `masyarakat` (`ktp`, `tgl_aduan`, `isi_aduan`, `lok_kejadian`) VALUES
-(7777, '2024-03-06', 'banjir', 'rumah joan'),
-(7782, '2024-05-09', 'kebakaran', 'aws'),
-(7783, '2024-05-09', 'kebakaran hutan', 'bengkuring');
+(77777, '2024-06-01', 'banjir', 'jalan pahlawan');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `petugas`
+-- Struktur dari tabel `petugas`
 --
 
 CREATE TABLE `petugas` (
@@ -54,44 +52,44 @@ CREATE TABLE `petugas` (
   `username` varchar(25) NOT NULL,
   `password` varchar(32) NOT NULL,
   `level` enum('admin','petugas') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `petugas`
+-- Dumping data untuk tabel `petugas`
 --
 
 INSERT INTO `petugas` (`id_petugas`, `username`, `password`, `level`) VALUES
-(1, 'ridwan', 'ridwan', 'admin'),
-(2, 'iwan', 'iwan', 'petugas');
+(1, 'atmin', 'atmin', 'admin'),
+(2, 'petugas', 'petugas', 'petugas');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `masyarakat`
+-- Indeks untuk tabel `masyarakat`
 --
 ALTER TABLE `masyarakat`
   ADD PRIMARY KEY (`ktp`);
 
 --
--- Indexes for table `petugas`
+-- Indeks untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
   ADD PRIMARY KEY (`id_petugas`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `masyarakat`
+-- AUTO_INCREMENT untuk tabel `masyarakat`
 --
 ALTER TABLE `masyarakat`
-  MODIFY `ktp` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7786;
+  MODIFY `ktp` int(16) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77778;
 
 --
--- AUTO_INCREMENT for table `petugas`
+-- AUTO_INCREMENT untuk tabel `petugas`
 --
 ALTER TABLE `petugas`
   MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
