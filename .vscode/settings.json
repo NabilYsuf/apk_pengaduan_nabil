@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.schemaForm": "json",
+        "*.viewConfig": "json",
+        "*.settings": "json",
+        "/intents/*": "json",
+        "/*_v*/views/*": "json",
+        "/*_v*/intents/*": "json"
+    }
+}
